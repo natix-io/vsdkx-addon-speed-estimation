@@ -1,6 +1,6 @@
 # Speed Estimation
 
-This add-on calculates the direction of movement of trackable objects based on their past and present coordinates in the frame. We implement the speed estimation algorithm proposed on the following paper:
+This add-on calculates the speed of trackable objects based on their past and present coordinates in the frame. We implement the speed estimation algorithm proposed on the following paper:
 
 <https://ieeexplore.ieee.org/document/6614066>
 
