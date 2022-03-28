@@ -2,9 +2,9 @@ from setuptools import setup, find_namespace_packages
 
 setup(
     name='vsdkx-addon-speed-estimation',
-    url='https://github.com/natix-io/vsdkx-addon-tracking.git',
+    url='https://github.com/natix-io/vsdkx-addon-speed-estimation.git',
     author='Helmut',
-    author_email='helmut@natix.io',
+    author_email='nicole@natix.io',
     namespace_packages=['vsdkx', 'vsdkx.addon'],
     packages=find_namespace_packages(include=['vsdkx*']),
     dependency_links=[
