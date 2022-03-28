@@ -56,5 +56,5 @@ When the flag `person_action`, we perform an additional processing step, where w
 The add-on's output is shared on the `AddonObject.inference.extra` for each object that was actively tracked by the `tracking` add-on on the current frame:
 
 - `AddonObject.inference.extra['current_speed']` - (format: `dict` where `{'obj_id': speed}`)
-- `AddonObject.inference.extra['current_action']` - (format: `dict` where `{'obj_id': speed}`)
+- `AddonObject.inference.extra['current_action']` - (format: `dict` where `{'obj_id': action}`)
 
