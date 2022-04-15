@@ -1,7 +1,10 @@
+import logging
 import numpy as np
 
 from vsdkx.core.interfaces import Addon
 from vsdkx.core.structs import AddonObject
+
+LOG_TAG = "Speed Addon"
 
 
 class SpeedEstimationProcessor(Addon):
@@ -42,6 +45,8 @@ class SpeedEstimationProcessor(Addon):
                  model_config: dict, drawing_config: dict):
         super().__init__(
             addon_config, model_settings, model_config, drawing_config)
+        self._logger = logging.getLogger(LOG_TAG)
+        
         self.person_action = addon_config['person_action']
         self.camera_length = addon_config['camera_length']  # meter
         self.fps = addon_config['fps']
@@ -70,6 +75,10 @@ class SpeedEstimationProcessor(Addon):
             addon_object(AddonObject): Addon object containing
             'trackable_objects_history' key set in the shared attribute.
         """
+        self._logger.debug(
+            f"Received trackable objects history"
+            f"{addon_object.shared.get('trackable_objects_history', {})}"
+        )
 
         frame_height, frame_width, _ = addon_object.frame.shape
         self._get_object_speed(
