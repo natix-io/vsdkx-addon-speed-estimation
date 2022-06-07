@@ -76,8 +76,8 @@ class SpeedEstimationProcessor(Addon):
             'trackable_objects_history' key set in the shared attribute.
         """
         self._logger.debug(
-            f"Received trackable objects history"
-            f"{addon_object.shared.get('trackable_objects_history', {})}"
+            f"Received {len(addon_object.shared.get('trackable_objects_history', {}))} "
+            f"objects in trackable objects history"
         )
 
         frame_height, frame_width, _ = addon_object.frame.shape
